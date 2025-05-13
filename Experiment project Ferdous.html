@@ -1,0 +1,205 @@
+   <!-- 
+   This is a complete HTML document for a personal nature photography gallery website. 
+   It includes structured sections such as a styled header, responsive photo grid 
+   gallery, contact form, and footer with social links.  -->
+
+   <!--- 
+    Lesson 1–3: Basic HTML structure, metadata, and fonts 
+    - Linking to external Google Fonts.
+    - Adding internal CSS for layout and design.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Canvas & Horizon - Nature Photo Gallery</title>
+  
+  <style>
+    /* Based on Lesson 3–11: Basic styling CSS, box model, layout, and responsive display */
+
+    /* Base styles for body and font */
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color:lightyellow;
+    }
+
+    /* Header styles */
+    header {
+      background-color:lightslategray;
+      color: white;
+      padding: 1.0rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .site-title {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    .site-info {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    /* Gallery layout styles using CSS Grid based on lesson 8 */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop view */
+      gap: 30px;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .gallery-item {
+      background: white;
+      padding: 10px;
+      border-radius: 20px;
+      
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      cursor: pointer;
+      
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    .description {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color:black;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .social-links a {
+      margin-right: 30px;
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Lesson 12–14: Form design and accessibility */
+    form {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+      background:white;
+      border-radius: 10px;
+    }
+
+    form h2 {
+      margin-top: 0;
+      color: black;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid skyblue;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    
+  </style>
+</head>
+<body>
+       <!-- Lesson 5,6,9: Semantic elements and page structure class & Id-->
+       <!-- A class is a type of attribute that we can add to any element in our HTML code.
+
+       A class is a name, that we can choose. We can use a class to show the developer 
+       what role the element has in the design. Then we can use classes in the CSS to 
+       give us better control over the design of one or more elements in the HTML.-->
+  <header>
+    <div class="site-info">
+      <div class="site-title">Canvas & Horizon - Nature Photo Gallery</div>
+      <div>Name: Ferdous Faisal<br>Background: Photographer & Nature Enthusiast</div>
+    </div>
+  </header>
+
+   
+
+    <!-- Lesson 05 (Images and Layout) and 17 (Accessibility):  - Static gallery layout  -->
+<section class="gallery" aria-label="Nature photography gallery">
+    <div class="gallery-item">
+      <img src="https://picsum.photos/id/1015/600/400" alt="Mountain Stream">
+      <div class="description">Mountain Stream</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://picsum.photos/id/1025/600/400" alt="Sunset Beach">
+      <div class="description">Sunset Beach</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://picsum.photos/id/1035/600/400" alt="Forest Trail">
+      <div class="description">Forest Trail</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://picsum.photos/id/1045/600/400" alt="Lakeside Calm">
+      <div class="description">Lakeside Calm</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://picsum.photos/id/1055/600/400" alt="Golden Fields">
+      <div class="description">Golden Fields</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://picsum.photos/id/1065/600/400" alt="Winter Peaks">
+      <div class="description">Winter Peaks</div>
+    </div>
+  </section>
+  <div>
+    <!-- Lesson 7:The Box Model - Margin And Padding Accessible photo gallery section -->
+  <section class="gallery" aria-label="Nature photography gallery">
+    <!-- Gallery items inserted via JS -->
+  </section>
+
+    <!-- Lesson 14 - Forms: Contact form for feedback or inquiries -->
+  <form>
+    <h1>Contact the Photographer</h1>
+    <label for ="name"> Your name</label>
+    <input id ="name" type="name">
+    <label for="email">Your email:</label>
+    <input id="email" type="email">
+    <label for="message">Your message:</label>
+    <textarea id="message" name="message" rows="5"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
+<footer>
+ <div class="social-links">
+    <!-- Based on lesson 4 Linked Together -->
+  <P>Connect with me:</P>
+  <a href="#">Facebook</a>
+  <a href="#">Instagram</a>
+  <a href="#">X (Twitter)</a>
+ </div>
+  <p> 2025 Canvas & Horizon | Designed with ❤️</p>
+</footer>
+  
+</body>
+</html>
